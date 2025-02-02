@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Firm Blog Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .blog-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .blog-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .blog-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .blog-item {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .blog-item:hover {
+            transform: translateY(-5px);
+        }
+        .blog-item img {
+            flex: 1 1 300px;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .blog-content {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .blog-content h3 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .blog-content p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .blog-content a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .blog-content a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .blog-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="blog-section">
+        <div class="blog-header">
+            <h2>Our Legal Insights</h2>
+            <p>Stay updated with the latest news and articles from our law firm.</p>
+        </div>
+        <div class="blog-container">
+            <div class="blog-item">
+                <img src="https://via.placeholder.com/400x300" alt="Blog Image 1">
+                <div class="blog-content">
+                    <h3>Understanding Contract Law</h3>
+                    <p>Explore the fundamentals of contract law and how it applies to businesses in real-world scenarios. Learn about common pitfalls and best practices.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="https://via.placeholder.com/400x300" alt="Blog Image 2">
+                <div class="blog-content">
+                    <h3>Tips for Handling Disputes</h3>
+                    <p>Discover effective strategies to resolve disputes amicably and efficiently. Learn how mediation and arbitration can save time and resources.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="https://via.placeholder.com/400x300" alt="Blog Image 3">
+                <div class="blog-content">
+                    <h3>Recent Legal Reforms</h3>
+                    <p>Stay informed about recent changes in the legal landscape and their implications for businesses and individuals alike.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

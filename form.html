@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law firm website</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><img src="IMAGES/logo.jpeg" alt="Law Firm Logo"></div>
+        <div class="company-name">Alan Smith & Co. Law</div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#achivements">Firm Overview</a>
+            <a href="#services">Practice Area</a>
+            <a href="#contact">Contact</a>
+            <a href="#schedule">Schedule</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <div class="form-container">
+        <h2>Schedule an Appointment</h2>
+        <form action="submit_appointment.php" method="post" onsubmit="return validateForm()">
+
+          <label for="name"><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          
+          <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          
+          <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          
+          <label for="reason"><i class="fas fa-info-circle"></i> Reason for Appointment</label>
+          <select id="reason" name="reason" required>
+            <option value="">-- Select an option --</option>
+            <option value="legal_consultation">Legal Consultation</option>
+            <option value="contract_review">Contract Review</option>
+            <option value="dispute_resolution">Dispute Resolution</option>
+            <option value="family_law_case">Family Law Case</option>
+            <option value="real_estate_matter">Real Estate Matter</option>
+            <option value="other">Other</option>
+          </select>
+          
+          <label for="date"><i class="fas fa-calendar-alt"></i> Preferred Date</label>
+          <input type="date" id="date" name="appointment_date" required>
+          
+          <label for="time"><i class="fas fa-clock"></i> Preferred Time</label>
+          <input type="time" id="time" name="appointment_time" required>
+          
+          <label for="description"><i class="fas fa-comment"></i> Brief Description of Legal Issue</label>
+          <textarea id="description" name="description" rows="5" placeholder="Provide a brief description of your legal issue" required></textarea>
+          
+          <label for="consultation-mode"><i class="fas fa-video"></i> Preferred Consultation Mode</label>
+          <select id="consultation-mode" name="consultation_mode" required>
+            <option value="">-- Select a mode --</option>
+            <option value="in_person">In-Person</option>
+            <option value="virtual_meeting">Virtual/Online Meeting</option>
+            <option value="email">Email</option>
+            <option value="Phone-call">Phone-Call</option>
+          </select>
+          
+          <button type="submit"><i class="fas fa-calendar-check"></i> Submit Appointment</button>
+        </form>
+      </div>
+      
+
+
+
+       <!-- Footer Section -->
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- About Section -->
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                  <p class="text-sm">
+                      We are a trusted law firm providing high-quality legal services. Our dedicated team ensures the best outcomes for our clients.
+                  </p>
+              </div>
+
+              <!-- Quick Links -->
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                  <ul class="space-y-2 text-sm">
+                      <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                      <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                      <li><a href="#" class="hover:text-blue-400">Services</a></li>
+                      <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+                      <li><a href="#" class="hover:text-blue-400">Schedule</a></li>
+                  </ul>
+              </div>
+
+              <!-- Contact Information -->
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                  <ul class="text-sm space-y-2">
+                      <li><span class="font-bold">Address:</span> London 30 Bonhill Street.EC2A 4DN</li>
+                      <li><span class="font-bold">Phone:</span> +44 585 595 6199</li>
+                      <li><span class="font-bold">Email:</span> generalsmith85@yahoo.com</li>
+                  </ul>
+                  <!-- Social Media Icons -->
+                  <div class="flex space-x-4 mt-4">
+                      <a href="#" class="hover:text-blue-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22.675 0h-21.35c-..." />
+                          </svg>
+                      </a>
+                      <a href="#" class="hover:text-blue-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12a10 10 0 ..." />
+                          </svg>
+                      </a>
+                      <a href="#" class="hover:text-blue-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 2c5.525 0 ..." />
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="border-t border-blue-700 mt-8 pt-4 text-center text-sm">
+          © 2000 Alan Smith & Co. Law. All rights reserved.
+      </div>
+  </footer>
+  
+  
+  
+  
+  
+
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>
