@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Hero Section with Navbar */
+.hero {
+    position: relative;
+    background: url('IMAGES/hero\ 1.jpeg') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar .company-name {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #f4a261;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+.hero-content .btn a{
+    text-decoration: none;
+    color:#ffffff ;
+}
+
+.hero-content .btn  {
+    padding: 0.75rem 2rem;
+    background-color: #f4a261;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.hero-content .btn:hover {
+    background-color: #e76f51;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* readmore */
+.blog-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-image: url('https://source.unsplash.com/1600x900/?law,justice') no-repeat center center/cover;
+
+}
+.blog-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    overflow-y: auto;
+    text-align: center;
+}
+.blog-card h2 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.blog-card h2 i {
+    color: #555;
+}
+
+@media (max-width: 1024px) {
+    .blog-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-section {
+        grid-template-columns: 1fr;
+    }
+}
